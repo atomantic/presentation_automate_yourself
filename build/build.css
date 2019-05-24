@@ -1,0 +1,590 @@
+/**
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #ccc;
+	background: none;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #2d2d2d;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #999;
+}
+
+.token.punctuation {
+	color: #ccc;
+}
+
+.token.tag,
+.token.attr-name,
+.token.namespace,
+.token.deleted {
+	color: #e2777a;
+}
+
+.token.function-name {
+	color: #6196cc;
+}
+
+.token.boolean,
+.token.number,
+.token.function {
+	color: #f08d49;
+}
+
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+	color: #f8c555;
+}
+
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+	color: #cc99cd;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+	color: #7ec699;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+	color: #67cdcc;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.token.inserted {
+	color: green;
+}
+
+pre[class*="language-"].line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+	position: relative;
+	white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 1px solid #999;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+	.line-numbers-rows > span {
+		pointer-events: none;
+		display: block;
+		counter-increment: linenumber;
+	}
+
+		.line-numbers-rows > span:before {
+			content: counter(linenumber);
+			color: #999;
+			display: block;
+			padding-right: 0.8em;
+			text-align: right;
+		}
+
+pre[data-line] {
+	position: relative;
+	padding: 1em 0 1em 3em;
+}
+
+.line-highlight {
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: inherit 0;
+	margin-top: 1em; /* Same as .prism’s padding-top */
+
+	background: hsla(24, 20%, 50%,.08);
+	background: -webkit-gradient(linear, left top, right top, color-stop(70%, hsla(24, 20%, 50%,.1)), to(hsla(24, 20%, 50%,0)));
+	background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+
+	pointer-events: none;
+
+	line-height: inherit;
+	white-space: pre;
+}
+
+	.line-highlight:before,
+	.line-highlight[data-end]:after {
+		content: attr(data-start);
+		position: absolute;
+		top: .4em;
+		left: .6em;
+		min-width: 1em;
+		padding: 0 .5em;
+		background-color: hsla(24, 20%, 50%,.4);
+		color: hsl(24, 20%, 95%);
+		font: bold 65%/1.5 sans-serif;
+		text-align: center;
+		vertical-align: .3em;
+		border-radius: 999px;
+		text-shadow: none;
+		-webkit-box-shadow: 0 1px white;
+		        box-shadow: 0 1px white;
+	}
+
+	.line-highlight[data-end]:after {
+		content: attr(data-end);
+		top: auto;
+		bottom: .4em;
+	}
+
+.line-numbers .line-highlight:before,
+.line-numbers .line-highlight:after {
+	content: none;
+}
+
+pre {
+  border-radius: 8px;
+}
+.toast {
+  position: absolute;
+  bottom: 0;
+  right: -500px;
+}
+.bespoke-active .toast {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-delay: 7s;
+          transition-delay: 7s;
+  bottom: 0;
+  right: 0;
+}
+.notifyjs-instructions-base,
+.notifyjs-instructions-orange,
+.notifyjs-instructions-red {
+  white-space: nowrap;
+  background-color: #d9edf7;
+  color: #036;
+  border: 1px solid #bce8f1;
+  padding: 5px;
+  border-radius: 4px;
+  text-shadow: none;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.4em;
+  font-size: 22px;
+  font-weight: 400;
+}
+.notifyjs-instructions-base .clearfix,
+.notifyjs-instructions-orange .clearfix,
+.notifyjs-instructions-red .clearfix {
+  clear: both;
+}
+.notifyjs-instructions-orange {
+  color: #f85;
+  background-color: #fcf8e3;
+  border-color: #fbeed5;
+}
+.notifyjs-instructions-red {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7;
+}
+.emoticon {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  font-style: normal;
+}
+p.code .em-red,
+p.code .em-yellow,
+p.code .em-green,
+p.code .em-blue {
+  margin: 5px 0;
+}
+.bxslider {
+  display: none;
+}
+#marquee div {
+  position: relative;
+  width: 150px;
+  float: left;
+}
+.filll {
+  height: 120%;
+  top: -20%;
+  right: 0;
+  position: absolute;
+  margin: auto;
+}
+.fillr {
+  height: 120%;
+  left: 0;
+  top: -20%;
+  position: absolute;
+  margin: auto;
+}
+.emoji {
+  display: inline-block;
+  width: 60px;
+  text-decoration: none;
+}
+/* stronger highlight */
+.line-highlight {
+  background: rgba(153,122,102,0.28);
+}
+.fullscreen > .title {
+  background-color: rgba(0,0,0,0.6);
+  padding: 5px;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+.credit {
+  z-index: 1000;
+  text-shadow: none;
+  position: absolute;
+}
+.multibox {
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+.multibox.top {
+  top: 2%;
+  margin-top: 0;
+}
+.multibox > .title {
+  background-color: rgba(0,0,0,0.6);
+  padding: 5px;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+.multibox > .foot {
+  background-color: rgba(0,0,0,0.6);
+  padding: 5px;
+  text-align: center;
+  position: absolute;
+  bottom: 2%;
+  width: 100%;
+}
+.multibox .box.right,
+.multibox .box.left,
+.multibox .box.top {
+  float: left;
+  max-width: 43%;
+  position: relative;
+}
+.multibox .box.right.bottom,
+.multibox .box.left.bottom,
+.multibox .box.top.bottom {
+  position: absolute;
+  bottom: 2%;
+  margin-bottom: 0;
+}
+.multibox .box.right.top,
+.multibox .box.left.top,
+.multibox .box.top.top {
+  margin-top: 30px;
+}
+.multibox .box.right.right,
+.multibox .box.left.right,
+.multibox .box.top.right {
+  float: right;
+  right: 2%;
+}
+.multibox .box.right.left,
+.multibox .box.left.left,
+.multibox .box.top.left {
+  left: 2%;
+}
+.multibox.full .box.left {
+  left: 1%;
+}
+.multibox.full .box.right {
+  right: 1%;
+}
+#banner {
+  top: -10px;
+}
+.small,
+code[class*="language-"].small,
+pre[class*="language-"].small {
+  font-size: 0.8em;
+}
+.smaller,
+code[class*="language-"].smaller,
+pre[class*="language-"].smaller {
+  font-size: 0.7em;
+  line-height: 0.8em;
+}
+.box.big {
+  font-size: 2em;
+}
+.box.fill {
+  padding: 15px;
+}
+.box ul .icon {
+  height: 40px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.box ul ul {
+  padding-left: 20px;
+}
+.box ul.tight li {
+  margin-bottom: 0;
+}
+.box ul.smaller li {
+  font-size: 0.7em;
+  line-height: 0.8em;
+}
+.center {
+  margin: auto;
+}
+.green {
+  background-color: #468847;
+}
+.yellow {
+  background-color: #8a6d3b;
+}
+.blue {
+  background-color: #3a87ad;
+}
+.orange {
+  background-color: #f85;
+}
+.red {
+  background-color: #b94a48;
+}
+.comment {
+  color: #999;
+}
+.file {
+  text-align: left;
+  font-family: monospace;
+  white-space: pre;
+}
+.file .cmd {
+  color: #0b0;
+  margin-left: -100px;
+  margin-top: -50px;
+}
+.file .cmd span {
+  margin-left: -10px;
+}
+.file .alert {
+  padding: 0 5px;
+}
+.fancy {
+  font-family: "Courgette", "EB Garamond", Georgia, cursive;
+}
+/*
+ * people
+ */
+.person {
+  height: 72px;
+  width: 72px;
+  background-repeat: no-repeat;
+  background-size: 72px;
+  background-position: 50% 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 2px #000, 0 0 0 4px #472f00;
+          box-shadow: 0 0 0 2px #000, 0 0 0 4px #472f00;
+  margin: 0 16px;
+}
+.person.center {
+  margin: 15px auto;
+}
+.credit .person {
+  position: relative;
+}
+.me,
+.person {
+  -webkit-box-shadow: 0 0 0 2px #000, 0 0 0 4px #472f00;
+          box-shadow: 0 0 0 2px #000, 0 0 0 4px #472f00;
+}
+.topics .caleb {
+  position: relative;
+  z-index: 9999;
+}
+.topics .me {
+  position: relative;
+  z-index: 9999;
+}
+.shade.half {
+  position: absolute;
+  z-index: 99999;
+  background-color: #aaa;
+  opacity: 0.2;
+  width: 50%;
+  height: 100%;
+  left: 0;
+}
+.white a {
+  text-shadow: none;
+  color: #369;
+}
+.emojiTalker {
+  position: relative;
+}
+.iconQuote {
+  display: inline-block;
+  font-size: 0.8em;
+  top: -55px;
+  position: relative;
+  left: 0;
+  line-height: 0.8em;
+}
+.iconQuoteBubble {
+  display: inline-block;
+  position: absolute;
+}
+.iconQuoteContent {
+  display: inline-block;
+  position: absolute;
+  font-size: 0.5em;
+  top: -4px;
+  left: 10px;
+}
+.z200 {
+  zoom: 200%;
+}
+.z120 {
+  zoom: 120%;
+}
+.z50 {
+  zoom: 50%;
+}
+.z80 {
+  zoom: 80%;
+}
+.rocking {
+  display: inline-block;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  -webkit-animation: rocking 3s ease-in-out infinite alternate;
+          animation: rocking 3s ease-in-out infinite alternate;
+}
+h1 {
+  font-size: 64px;
+}
+h1 img {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.em-grey {
+  color: #333;
+  background-color: #ccc;
+  border-color: #666;
+}
+.reg {
+  font-style: normal;
+}
+.accent {
+  color: #82cfd4;
+}
+.blackhat:before {
+  content: "🧢";
+  -webkit-filter: grayscale(100);
+          filter: grayscale(100);
+  display: inline-block;
+}
+@-webkit-keyframes rocking {
+  from {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  80% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@keyframes rocking {
+  from {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  80% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
