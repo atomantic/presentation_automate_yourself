@@ -12542,10 +12542,7 @@ Prism.languages.js = Prism.languages.javascript;
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],20:[function(require,module,exports){
 'use strict';
-// Prism syntax highlighting
-// This is actually loaded from "bower_components" thanks to
-// debowerify: https://github.com/eugeneware/debowerify
-window.$ = window.jQuery = require("jquery");
+window.$ = window.jQuery = require("jquery"); // needed for notify plugin
 require('notifyjs-browser')(window.$);
 require('prismjs');
 require('prismjs/components/prism-markup.min.js');
@@ -12586,7 +12583,7 @@ var deck = bespoke.from('article', [
 //   console.log('finished', $(this).closest('.bespoke-slide'))
 //  $(this).closest('.bespoke-slide').addClass('x-gif-finished');
 // });
-deck.on('activate', function(slide){
+deck.on('activate', function(/*slide*/){
   var $highlight = $('.bespoke-active pre[data-line]').not('.rendered');
   if($highlight.length) {
     // re-trigger prism to activate line-highlight properly
