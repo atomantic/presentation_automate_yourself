@@ -1,0 +1,15 @@
+{
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true
+  },
+  "globals": {
+    "$": true,
+    "Prism": true
+  },
+  "rules": {
+    "no-unused-vars": 2,
+    "no-undef": 2
+  }
+}

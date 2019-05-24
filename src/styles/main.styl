@@ -1,0 +1,322 @@
+// New to Stylus? Check out http://learnboost.github.io/stylus
+// Use modern CSS thanks to Autoprefixer: https://github.com/ai/autoprefixer
+
+// Import CSS from "node_modules" and "bower_components"
+// thanks to Stylus' "import css" and "paths" options
+
+// @import 'prismjs/themes/prism.css'
+// @import 'prismjs/themes/prism-coy.css'
+// @import 'prismjs/themes/prism-dark.css'
+// @import 'prismjs/themes/prism-funky.css'
+// @import 'prismjs/themes/prism-okaidia.css'
+// @import 'prismjs/themes/prism-solarizedlight.css'
+@import 'prismjs/themes/prism-tomorrow.css'
+// @import 'prismjs/themes/prism-twilight.css'
+@import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
+@import 'prismjs/plugins/line-highlight/prism-line-highlight.css'
+
+pre
+  border-radius: 8px
+.toast
+  position:absolute
+  bottom:0
+  right:-500px
+.bespoke-active
+  .toast
+    transition-property: all
+    transition-duration: .5s
+    transition-delay: 7s
+    bottom:0
+    right:0
+
+.notifyjs-instructions-base
+  white-space: nowrap
+  background-color: #d9edf7
+  color: #036
+  border: 1px solid #bce8f1
+  padding: 5px
+  border-radius: 4px
+  text-shadow: none
+  font-family: Helvetica,Arial,sans-serif
+  line-height: 1.4em
+  font-size: 22px
+  font-weight: 400
+  .clearfix
+    clear: both
+
+.notifyjs-instructions-orange
+  @extend .notifyjs-instructions-base
+  color: #f85
+  background-color: #fcf8e3
+  border-color: #fbeed5
+.notifyjs-instructions-red
+  @extend .notifyjs-instructions-base
+  color: #b94a48
+  background-color: #f2dede
+  border-color: #eed3d7
+
+.emoticon
+  font-family:Helvetica,Arial,sans-serif
+  font-weight:normal
+  line-height:normal
+  font-style:normal
+p.code
+  .em-red, .em-yellow,.em-green,.em-blue
+      margin: 5px 0
+
+.bxslider
+  display:none
+
+#marquee
+  div
+    position:relative
+    width:150px
+    float:left
+
+.filll
+  height: 120%
+  top:-20%
+  right:0
+  position:absolute
+  margin:auto
+
+.fillr
+  height: 120%
+  left:0
+  top:-20%
+  position:absolute
+  margin:auto
+
+
+.emoji
+  display:inline-block
+  width:60px
+  text-decoration: none
+
+/* stronger highlight */
+.line-highlight
+  background: hsla(24, 20%, 50%,.28)
+
+.fullscreen
+  > .title
+    background-color: rgba(0,0,0,.6)
+    padding:5px
+    text-align:center
+    margin:0 0 20px 0
+
+.credit
+  z-index:1000
+  text-shadow:none
+  position:absolute
+.multibox
+  width:100%
+  height:100%
+  display:table
+  &.top
+    top: 2%
+    margin-top: 0
+  > .title
+    background-color: rgba(0,0,0,.6)
+    padding:5px
+    text-align:center
+    margin:0 0 20px 0
+  > .foot
+    background-color: rgba(0,0,0,.6)
+    padding:5px
+    text-align:center
+    position:absolute
+    bottom:2%
+    width:100%
+  .box.right,.box.left,.box.top
+    float:left
+    max-width:43%
+    position:relative
+    &.bottom
+      position:absolute
+      bottom:2%
+      margin-bottom: 0
+    &.top
+      margin-top:30px
+    &.right
+      float:right
+      right:2%
+    &.left
+      left:2%
+  &.full
+    .box.left
+      left:1%
+    .box.right
+      right:1%
+
+#banner
+  top:-10px
+
+
+.small, code[class*="language-"].small, pre[class*="language-"].small
+  font-size:.8em
+.smaller, code[class*="language-"].smaller, pre[class*="language-"].smaller
+  font-size:.7em
+  line-height: .8em
+
+.box
+  &.big
+    font-size:2em
+  &.fill
+    padding: 15px
+  ul
+    .icon
+      height:40px
+      vertical-align: middle
+      margin-right:10px
+    ul
+      padding-left:20px
+    &.tight
+      li 
+        margin-bottom: 0 
+    &.smaller
+      li 
+        font-size:.7em
+        line-height: .8em
+
+.center
+  margin: auto
+
+.green
+  background-color: #468847
+.yellow
+  background-color: #8a6d3b
+.blue
+  background-color: #3a87ad
+.orange
+  background-color: #f85
+.red
+  background-color: #b94a48
+
+
+
+.comment
+    color:#999
+.file
+  text-align:left
+  font-family:monospace
+  white-space: pre
+  .cmd
+    color: #0b0
+    margin-left:-100px
+    margin-top:-50px
+    span
+      margin-left:-10px
+  .alert
+    padding: 0 5px
+
+.fancy
+  font-family:"Courgette", "EB Garamond", Georgia, cursive
+
+/*
+ * people
+ */
+$me-height = 72px
+.person
+  height: $me-height
+  width: $me-height
+  background-repeat: no-repeat
+  background-size: $me-height
+  background-position: 50% 50%
+  border-radius: 50%
+  box-shadow: 0 0 0 2px #000,0 0 0 4px #472f00
+  margin: 0 16px
+  &.center
+    margin: 15px auto
+.credit
+  .person
+    position:relative
+
+.me,.person
+  box-shadow: 0 0 0 2px #000,0 0 0 4px #472f00
+
+.topics
+  .caleb
+    position:relative
+    z-index: 9999
+
+  .me
+    position:relative
+    z-index: 9999
+
+.shade.half
+  position:absolute
+  z-index:99999
+  background-color:#aaa
+  opacity:.2
+  width:50%
+  height:100%
+  left:0
+
+.white
+  a
+    text-shadow: none
+    color: #369
+
+.emojiTalker
+  position:relative
+.iconQuote
+  display:inline-block
+  font-size: .8em
+  top:-55px
+  position:relative
+  left:0
+  line-height: .8em
+.iconQuoteBubble
+  display:inline-block
+  position:absolute
+.iconQuoteContent
+  display:inline-block
+  position:absolute
+  font-size: .5em
+  top:-4px
+  left:10px
+
+.z200
+  zoom:200%
+.z120
+  zoom:120%
+.z50
+  zoom:50%
+.z80
+  zoom:80%
+
+
+@keyframes rocking
+  from
+    transform: rotate(-5deg)
+  80%
+    transform: rotate(15deg)
+  to
+    transform: rotate(0deg)
+
+.rocking
+  display:inline-block
+  transform:rotate(30deg)
+  animation:rocking 3s ease-in-out infinite alternate
+
+h1
+  font-size: 64px
+  img
+    vertical-align: middle
+    margin-right:5px
+
+.em-grey
+  color: #333
+  background-color: #ccc
+  border-color: #666
+
+.reg
+  font-style:normal
+
+.accent
+  color: #82cfd4
+
+.blackhat:before
+  content: "🧢"
+  filter: grayscale(100)
+  display: inline-block
