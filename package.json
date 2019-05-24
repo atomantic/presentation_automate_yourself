@@ -1,5 +1,5 @@
 {
-  "name": "presentation-2019-awscloud",
+  "name": "presentation-2019-automate",
   "version": "1.0.1",
   "scripts": {
     "setup": "npm i",
