@@ -548,6 +548,11 @@ h1 img {
   background-color: #ccc;
   border-color: #666;
 }
+.em-white {
+  color: #666;
+  background-color: #fff;
+  border-color: #ccc;
+}
 .reg {
   font-style: normal;
 }
