@@ -12,6 +12,9 @@ Don't be afraid of automation; take control of it! One of the most rewarding par
   - https://www.npr.org/templates/transcript/transcript.php?storyId=528807590
   - "since 1980, right around the time the electronic spreadsheet came out, 400,000 bookkeeping and accounting clerk jobs have gone away. But 600,000 accounting jobs have been added."
 - Code: jQuery $.get -> fetch(), and $(query) to document.querySelectorAll()
+- dotfiles
+  - https://dotfiles.github.io/
+  - https://github.com/atomantic/dotfiles
 - Grading Assignments
   - check the github repo
   - make sure there's a readme

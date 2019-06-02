@@ -5,7 +5,8 @@
     "setup": "npm i",
     "deploy": "./node_modules/.bin/gulp deploy",
     "build": "./node_modules/.bin/gulp build",
-    "start": "./node_modules/.bin/gulp serve"
+    "start": "./node_modules/.bin/gulp serve",
+    "test": "echo '🆗'"
   },
   "dependencies": {
     "gulp-gh-pages": "0.5.4"

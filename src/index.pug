@@ -5,6 +5,7 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     title Automate Yourself Out of a Job
     link(rel='stylesheet', type='text/css', href='build/build.css')
+    script(src="https://use.fontawesome.com/aa75e2adb5.js")
   body
     article#presentation
       section
@@ -15,56 +16,211 @@ html(lang='en')
           h4.mid out of
           h2 A Job
           .mid by
-          h2.notranslate Adam Eivy <span class="rocking">\[._.]/</span>
+          h2.notranslate Adam Eivy <span class="rocking accent">\[._.]/</span>
             .me.center
           h4 Talk Time: 30 minutes
           h4 Updated: 2019.05.23
           a(href="https://bit.ly/automate_yourself") Hosted on bit.ly/automate_yourself
-
-      section.gplay.jellybean
-        .box.dark
-          h1 ...
-          .mid ...
-          ul
-            li ...
-            li ...
-            li ...
-
-      section.treebark.jellybean
-        .box.dark
-          h1 ...
-          .mid ...
-          ul
-            li ...
-            li ...
-            li ...
             
       section
         .fullscreen
           x-gif(src="images/perfect_beardscratch.gif" fill)
           .credit cinema gif thanks to :&nbsp;
             a(href="http://www.gideondevilliers.com",target="off") gideon de villiers
+        .box.left.bottom.darker
+          h2 Who am I?
+          ul
+            li Sr. Staff Software Architect
+            li 16 years in the Industry
+            li Machine Learning
+            li DevOps
+            li Software Security
+            li etc ¯\_(ツ)_/¯
+
+      section.gplay.jellybean
+        .fullscreen
+          img.fill(src="images/mlclass.png")
+        .box.black
+          h1 Machine Learning Class
+          a(href="https://github.com/atomantic/ml_class") github.com/atomantic/ml_class
+          .mid <span class="reg">🙀</span> "...will automation&nbsp;<span class="em-red animated flash delay5">destroy</span> &nbsp;<strike class="notify" title="humans" data-position="bottom center">human jobs</strike>?"
+
+      section.white
+        .box.white.z200
+          h2 We are Automating Incredible Things
+          img(src="images/dmitry.png", height="100px")
+          div: video(src="images/dcgan.mp4", autoplay, loop, muted)
+          h4: a(href="https://arxiv.org/abs/1905.08233 ") arxiv.org/abs/1905.08233 
+
+      section.gplay.black
+        .fullscreen
+        .box
+          h2 And Some Scary Things
+          div.notify(title="Today: Boston Dynamics"): img(src="images/bd_dog.gif")
+          div.notify(title="Tomorrow: Black Mirror"): img(src="images/bm_dog.gif")
+
+      section.gplay.jellybean
+        .fullscreen
+          img.fill(src="images/agriculture_jobs.png")
+          .credit.em-white: a(href="https://ourworldindata.org/employment-in-agriculture") ourworldindata.org/employment-in-agriculture
+        .box.left
+          h2 😱 But Our Agriculture Jobs...
+          ul
+            li 1901: > 60%
+            li 2019: < ~5%
+
+      section.treebark.jellybean
+        .box.dark.z150
+          h2 55% unemployment!?
+          .mid nope, they became:
+          ul
+            li web developers
+            li youtube personalities
+            li algorithmic investors
+            li etc...
+      
+      section.treebark.black
+        .box.dark
+          h1 Science Fiction
+          h1 has <span class="em-red">not yet imagined</span>
+          h1 the <span class="em-blue">jobs</span> that will exist
+          h1 in 50 years
+      
+      section.treebark.black
+        .box.dark
+          h1 Science Fiction
+          h1 has <span class="em-red">not yet imagined</span>
+          h1 the <span class="em-blue">jobs</span> that will exist
+          h1 in <strike>50</strike><span class="em em-yellow">25 years</span>
+
+      section.gplay.jellybean
+        .box.dark
+          h2 The Story of VisiCalc
+          img(src="images/visicalc.png")
+          ul.noprefix
+            li: a(href="https://en.wikipedia.org/wiki/VisiCalc") Wikipedia: VisiCalc
+            li: a(href="https://www.npr.org/templates/transcript/transcript.php?storyId=528807590") NPR: Planet Money
+      
+      section.gplay.jellybean
+        .box.dark
+          h1 1980: electronic spreadsheet
+          h2 <span class="em-red">400,000</span> bookkeeping and accounting clerk jobs <span class="em-red">gone</span>
+          .mid but...
+          h2 <span class="em-green">600,000</span> accounting jobs <span class="em-green">created</span>
+
+      section.gplay.jellybean
+        .fullscreen
+          img.fill(src="images/spreadsheet.png")
+        .box
+          h2 insane powers
+
+      section.gplay.jellybean
+        .fullscreen
+          img.fill(src="images/stock_signals.png")
+
+      section.treebark.jellybean
+        .box.dark
+          h1 Engineers are Privileged 
+          h2 Always be automating away tedium
+          div: img(src="images/factory.gif")  
+          .mid You will be equiped for the next job
 
       section.gplay.jellybean
         .multibox
-          h2.title: .mid <span class="reg z150">🤔</span>&nbsp; ...
+          h2.title: .mid <span class="reg z150">🤔</span>&nbsp; Libraries are Automation!
           .box.left
-            h2 ...
-            .mid ...
+            h2 Before jQuery
+            .mid I need an element
             pre.line-numbers: code.language-javascript.
-              ...
+              var foo = document.getElementById('foo');
+              var bar = document.getElementById('bar');
+            .mid remove redundancy
+            pre.line-numbers: code.language-javascript.
+              var $ = document.getElementById;
+              var foo = $('foo');
+              var bar = $('bar');
           .box.right
-            h2 ...
-            .mid ...
+            h2 jQuery
             pre.line-numbers: code.language-javascript.
-              ...
-          h2.foot: .mid <span class="reg z150">🤩</span>&nbsp; ...
+              var $ = function(selector){
+                var query = {
+                  id: document.getElementById,
+                  cls: document.getElementByClassName,
+                  tag: document.getElementByTagName
+                }
+                var type = 'tag'
+                if(selector[0]==='#') type = 'id'; 
+                if(selector[0]==='.') type = 'cls'; 
+                return query[type](selector);
+              }
+
+          h2.foot: .mid <span class="reg z150">🤩</span>&nbsp; now: document.querySelectorAll() - <a href="http://youmightnotneedjquery.com/" target="off">no more jQuery</a>
       
+      section.treebark.jellybean
+        .box.z200
+          h2 Automate the <span class="em-green">Right Things™</span>
+          .mid and it will become
+          h2 Standard
+
+      section.treebark.jellybean
+        .box.dark
+          h2 Automate Backup and Recovery
+          .mid with dotfiles
+          img(src="images/dotfiles.gif", width="80%")
+          ul
+            li: a(href="https://dotfiles.github.io") Dotfiles Directory
+            li: a(href="https://github.com/atomantic/dotfiles") My Dotfiles (github.com/atomantic/dotfiles)
+
+      section.treebark.jellybean
+        .box
+          h1 Not Just for Code
+          .mid tedious tasks are everywhere
+
+      section.white
+        .fullscreen
+          img.fillh(src="images/rectangular_rotations.png")
+        .box.black.notify(title="not the most elegant code, but it works!", data-position="bottom center")
+          h1 Drawing Rectangles
+          a(href="https://github.com/atomantic/rectanglar_rotations") github.com/atomantic/rectanglar_rotations
+
       section
         .fullscreen
           x-gif(src="images/perfect_lostmind.gif", fill)
-        .box.bottom.right.wait-for-gif
-          h2 ...
+        .multibox
+          .box.top.left.notify(title="my wife: as a Code Fellows TA")
+            h2 grading assignments is tedius...
+          .box.bottom.left
+            ul
+              li Check github repo
+              li Check README.md
+              li Run app
+              li Make sure it works
+              li Check for things in code
+              li ...
+
+      section
+        .fullscreen
+          x-gif(src="images/eraserhead.gif", fill)
+        .box.bottom.right.notify(title="me: low tolerance for repetition", data-position="top middle")
+          h2 so tedious...
+          .mid sounds automatable...
+
+      section.gplay.jellbean
+        .box
+          pre: code.language-bash.
+            #!/usr/bin/env bash
+            git clone git@github.com:$1/$2.git
+            cd $2
+            if [ -f "README.md" ]; then
+                echo "✅ contains README.md"
+            else
+                echo "🚨 no README.md!"
+            fi
+            npm i >/dev/null 2>&1
+            npm test
+          pre: code.language-bash.
+            ./test.sh atomantic presentation_automate_yourself
+
       
       section.gplay.jellbean
         .fullscreen.blur2
@@ -72,24 +228,20 @@ html(lang='en')
         .box.wait-for-gif.notify(title="don't mess up", data-position="bottom center")
           h2 Automation Can Go Wrong
 
-      section
-        .fullscreen
-          x-gif(src="images/eraserhead.gif", fill)
-
-      section.white
-        .fullscreen
-          img.fillh(src="images/rectangular_rotations.png")
-        .box.black
-          h1 Drawing Rectangles
-          a(href="https://github.com/atomantic/rectanglar_rotations") https://github.com/atomantic/rectanglar_rotations
 
       section.blue.washi
         .box
-          h1 ...
+          h1 Learn Shell Scripting
+          .mid Get Comfortable with the Command-line
       
       section.midnight.washi
         .box.z150
-          h1 ...
+          h1 Final Take-Aways
+          ul
+            li Get Comfortable with the CLI (Command Line)
+            li Use Bash Scripting
+            li Avoid Tedium
+            li Iterate on the Seamless Experience
 
       section
         .fullscreen
@@ -104,9 +256,15 @@ html(lang='en')
             h2
               span.notranslate.emoticon.rocking \[._.]/
               span.notranslate &nbsp; Adam Eivy
-            h3 
-            h3 Twitter:
-              a(href='https://twitter/antic') &nbsp; @antic
+            blockquote
+              h3
+                a(href='https://bit.ly/automate_yourself')
+                  i.fa.fa-desktop
+                  | &nbsp;bit.ly/automate_yourself
+              h3
+                a(href='https://twitter.com/antic')
+                  i.fa.fa-twitter-square
+                  | &nbsp;@antic
             small: a.back(href='#1') &nbsp; restart
 
     script(src='build/build.js')
