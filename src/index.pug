@@ -205,8 +205,14 @@ html(lang='en')
           h2 so tedious...
           .mid sounds automatable...
 
+      section.blue.washi
+        .box
+          h1 Learn Shell Scripting
+          .mid Get Comfortable with the Command-line
+
       section.gplay.jellbean
         .box
+          .mid Let's Automate!
           pre: code.language-bash.
             #!/usr/bin/env bash
             git clone git@github.com:$1/$2.git
@@ -218,21 +224,40 @@ html(lang='en')
             fi
             npm i >/dev/null 2>&1
             npm test
+            if [ $? -eq 0 ]; then
+                echo "✅ tests pass"
+            else
+                echo "💀 tests failed"
+            fi
           pre: code.language-bash.
-            ./test.sh atomantic presentation_automate_yourself
+           $ ./test.sh atomantic presentation_automate_yourself
+           ✅ contains README.md
+           ✅ tests pass
 
+      section.gplay.jellbean
+        .box
+          h2 Use the CLI
+          .mid weather.txt
+          pre: code.language-bash.
+            humidity: 58%
+            moon: 1.7% Waning Crescent
+            precipitation: 0%
+            temp: 64°F,18°C
+            wind: 10 km/h
+          ul
+            li: a(href="http://man7.org/linux/man-pages/man1/cat.1.html" target="off") cat
+            li: a(href="http://man7.org/linux/man-pages/man1/grep.1.html" target="off") grep
+            li: a(href="http://man7.org/linux/man-pages/man1/awk.1p.html" target="off") awk
+            li: a(href="http://man7.org/linux/man-pages/man1/sed.1.html" target="off") sed
+          pre: code.language-bash.
+           $ cat weather.txt | grep "temp" | awk '{print $2}' | sed -E "s/,.+//"
+           64°F
       
       section.gplay.jellbean
         .fullscreen.blur2
           x-gif(src="images/nuke-4.gif", fill, n-times=1)
-        .box.wait-for-gif.notify(title="don't mess up", data-position="bottom center")
+        .box.wait-for-gif
           h2 Automation Can Go Wrong
-
-
-      section.blue.washi
-        .box
-          h1 Learn Shell Scripting
-          .mid Get Comfortable with the Command-line
       
       section.midnight.washi
         .box.z150

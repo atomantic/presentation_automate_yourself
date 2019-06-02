@@ -1,0 +1,5 @@
+humidity: 58%
+moon: 1.7% Waning Crescent
+precipitation: 0%
+temp: 64°F,18°C
+wind: 10 km/h
