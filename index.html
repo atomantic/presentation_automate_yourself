@@ -233,8 +233,15 @@ var bar = $('bar');</code></pre>
           <div class="mid">sounds automatable...</div>
         </div>
       </section>
+      <section class="blue washi">
+        <div class="box">
+          <h1>Learn Shell Scripting</h1>
+          <div class="mid">Get Comfortable with the Command-line</div>
+        </div>
+      </section>
       <section class="gplay jellbean">
         <div class="box">
+          <div class="mid">Let's Automate!</div>
           <pre><code class="language-bash">#!/usr/bin/env bash
 git clone git@github.com:$1/$2.git
 cd $2
@@ -244,9 +251,35 @@ else
     echo "🚨 no README.md!"
 fi
 npm i >/dev/null 2>&1
-npm test</code></pre>
-          <pre><code class="language-bash">./test.sh atomantic presentation_automate_yourself
-
+npm test
+if [ $? -eq 0 ]; then
+    echo "✅ tests pass"
+else
+    echo "💀 tests failed"
+fi</code></pre>
+          <pre><code class="language-bash">$ ./test.sh atomantic presentation_automate_yourself
+✅ contains README.md
+✅ tests pass
+</code></pre>
+        </div>
+      </section>
+      <section class="gplay jellbean">
+        <div class="box">
+          <h2>Use the CLI</h2>
+          <div class="mid">weather.txt</div>
+          <pre><code class="language-bash">humidity: 58%
+moon: 1.7% Waning Crescent
+precipitation: 0%
+temp: 64°F,18°C
+wind: 10 km/h</code></pre>
+          <ul>
+            <li><a href="http://man7.org/linux/man-pages/man1/cat.1.html" target="off">cat</a></li>
+            <li><a href="http://man7.org/linux/man-pages/man1/grep.1.html" target="off">grep</a></li>
+            <li><a href="http://man7.org/linux/man-pages/man1/awk.1p.html" target="off">awk</a></li>
+            <li><a href="http://man7.org/linux/man-pages/man1/sed.1.html" target="off">sed</a></li>
+          </ul>
+          <pre><code class="language-bash">$ cat weather.txt | grep "temp" | awk '{print $2}' | sed -E "s/,.+//"
+64°F
 </code></pre>
         </div>
       </section>
@@ -254,14 +287,8 @@ npm test</code></pre>
         <div class="fullscreen blur2">
           <x-gif src="images/nuke-4.gif" fill n-times="1"></x-gif>
         </div>
-        <div class="box wait-for-gif notify" title="don't mess up" data-position="bottom center">
+        <div class="box wait-for-gif">
           <h2>Automation Can Go Wrong</h2>
-        </div>
-      </section>
-      <section class="blue washi">
-        <div class="box">
-          <h1>Learn Shell Scripting</h1>
-          <div class="mid">Get Comfortable with the Command-line</div>
         </div>
       </section>
       <section class="midnight washi">
