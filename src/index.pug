@@ -218,6 +218,26 @@ html(lang='en')
 
       section.gplay.jellbean
         .box
+          h2 Use CLI Tools
+          .mid weather.txt
+          pre: code.language-bash.
+            humidity: 58%
+            moon: 1.7% Waning Crescent
+            precipitation: 0%
+            temp: 64°F,18°C
+            wind: 10 km/h
+          ul
+            li: a(href="http://man7.org/linux/man-pages/man1/cat.1.html" target="off") cat
+            li: a(href="http://man7.org/linux/man-pages/man1/grep.1.html" target="off") grep
+            li: a(href="http://man7.org/linux/man-pages/man1/awk.1p.html" target="off") awk
+            li: a(href="http://man7.org/linux/man-pages/man1/sed.1.html" target="off") sed
+          pre: code.language-bash.
+           $ cat weather.txt | grep "temp" | awk '{print $2}' | sed -E "s/,.+//"
+          pre: code.language-bash.
+           64°F
+           
+      section.gplay.jellbean
+        .box
           .mid Let's Automate!
           pre: code.language-bash.
             #!/usr/bin/env bash
@@ -239,40 +259,41 @@ html(lang='en')
            $ ./test.sh atomantic presentation_automate_yourself
            ✅ contains README.md
            ✅ tests pass
-
-      section.gplay.jellbean
-        .box
-          h2 Use the CLI
-          .mid weather.txt
-          pre: code.language-bash.
-            humidity: 58%
-            moon: 1.7% Waning Crescent
-            precipitation: 0%
-            temp: 64°F,18°C
-            wind: 10 km/h
-          ul
-            li: a(href="http://man7.org/linux/man-pages/man1/cat.1.html" target="off") cat
-            li: a(href="http://man7.org/linux/man-pages/man1/grep.1.html" target="off") grep
-            li: a(href="http://man7.org/linux/man-pages/man1/awk.1p.html" target="off") awk
-            li: a(href="http://man7.org/linux/man-pages/man1/sed.1.html" target="off") sed
-          pre: code.language-bash.
-           $ cat weather.txt | grep "temp" | awk '{print $2}' | sed -E "s/,.+//"
-           64°F
       
       section.gplay.jellbean
         .fullscreen.blur2
           x-gif(src="images/nuke-4.gif", fill, n-times=1)
         .box.wait-for-gif
-          h2 Automation Can Go Wrong
+          h2 Automation Can't Be Trusted
+      
+      section.gplay.jellbean
+        .fullscreen
+          .figureset
+            figure
+              img(src="images/automation_fail_tay.jpg")
+              figcaption <a href="https://en.wikipedia.org/wiki/Tay_(bot)" target="off">Microsoft Tay</a> <br />(Twitter Bot): Hitler Praising Racist < 12 hours
+            figure
+              img(src="images/automation_fail_google_image_tagging.png")
+              figcaption <a href="https://www.theverge.com/2018/1/12/16882408/google-racist-gorillas-photo-recognition-algorithm-ai" target="off">Google Photos</a>: Auto-Tagging Fail
+            figure
+              img(src="images/automation_fail_keepcalm.jpg")
+              figcaption <a href="https://medium.com/@jamesbridle/something-is-wrong-on-the-internet-c39c471271d2" target="off">Amazon Products</a>: Automated T-Shirts
+            figure
+              img(src="images/automation_fail_youtube_insane.png")
+              figcaption <a href="https://medium.com/@jamesbridle/something-is-wrong-on-the-internet-c39c471271d2" target="off">YouTube</a>: Insane Child Content
+            figure
+              img(src="images/automation_fail_youtube_pedo.png")
+              figcaption <a href="https://gizmodo.com/youtubes-nightmare-algorithm-exploited-children-by-reco-1835212766" target="off">YouTube</a>: Videos of Kids, Recommended to Pedophiles
       
       section.midnight.washi
         .box.z150
           h1 Final Take-Aways
           ul.noprefix
-            li 👨‍💻️ Get Comfortable with the CLI (Command Line)
+            li ⌨️ Get Comfortable with the CLI (Command Line)
             li 💻 Use Bash Scripting
             li 😓 Avoid Tedium
             li 🔁 Iterate on the Seamless Experience
+            li 👨‍💻️ Monitor Automation
             li
               span 🤘
               a(href="https://emojifinder.com/",target="off") Use Emoji
