@@ -248,6 +248,26 @@ var bar = $('bar');</code></pre>
       </section>
       <section class="gplay jellbean">
         <div class="box">
+          <h2>Use CLI Tools</h2>
+          <div class="mid">weather.txt</div>
+          <pre><code class="language-bash">humidity: 58%
+moon: 1.7% Waning Crescent
+precipitation: 0%
+temp: 64°F,18°C
+wind: 10 km/h</code></pre>
+          <ul>
+            <li><a href="http://man7.org/linux/man-pages/man1/cat.1.html" target="off">cat</a></li>
+            <li><a href="http://man7.org/linux/man-pages/man1/grep.1.html" target="off">grep</a></li>
+            <li><a href="http://man7.org/linux/man-pages/man1/awk.1p.html" target="off">awk</a></li>
+            <li><a href="http://man7.org/linux/man-pages/man1/sed.1.html" target="off">sed</a></li>
+          </ul>
+          <pre><code class="language-bash">$ cat weather.txt | grep "temp" | awk '{print $2}' | sed -E "s/,.+//"</code></pre>
+          <pre><code class="language-bash">64°F
+</code></pre>
+        </div>
+      </section>
+      <section class="gplay jellbean">
+        <div class="box">
           <div class="mid">Let's Automate!</div>
           <pre><code class="language-bash">#!/usr/bin/env bash
 git clone git@github.com:$1/$2.git
@@ -271,41 +291,43 @@ fi</code></pre>
         </div>
       </section>
       <section class="gplay jellbean">
-        <div class="box">
-          <h2>Use the CLI</h2>
-          <div class="mid">weather.txt</div>
-          <pre><code class="language-bash">humidity: 58%
-moon: 1.7% Waning Crescent
-precipitation: 0%
-temp: 64°F,18°C
-wind: 10 km/h</code></pre>
-          <ul>
-            <li><a href="http://man7.org/linux/man-pages/man1/cat.1.html" target="off">cat</a></li>
-            <li><a href="http://man7.org/linux/man-pages/man1/grep.1.html" target="off">grep</a></li>
-            <li><a href="http://man7.org/linux/man-pages/man1/awk.1p.html" target="off">awk</a></li>
-            <li><a href="http://man7.org/linux/man-pages/man1/sed.1.html" target="off">sed</a></li>
-          </ul>
-          <pre><code class="language-bash">$ cat weather.txt | grep "temp" | awk '{print $2}' | sed -E "s/,.+//"
-64°F
-</code></pre>
-        </div>
-      </section>
-      <section class="gplay jellbean">
         <div class="fullscreen blur2">
           <x-gif src="images/nuke-4.gif" fill n-times="1"></x-gif>
         </div>
         <div class="box wait-for-gif">
-          <h2>Automation Can Go Wrong</h2>
+          <h2>Automation Can't Be Trusted</h2>
+        </div>
+      </section>
+      <section class="gplay jellbean">
+        <div class="fullscreen">
+          <div class="figureset">
+            <figure><img src="images/automation_fail_tay.jpg">
+              <figcaption><a href="https://en.wikipedia.org/wiki/Tay_(bot)" target="off">Microsoft Tay</a> <br />(Twitter Bot): Hitler Praising Racist < 12 hours</figcaption>
+            </figure>
+            <figure><img src="images/automation_fail_google_image_tagging.png">
+              <figcaption><a href="https://www.theverge.com/2018/1/12/16882408/google-racist-gorillas-photo-recognition-algorithm-ai" target="off">Google Photos</a>: Auto-Tagging Fail</figcaption>
+            </figure>
+            <figure><img src="images/automation_fail_keepcalm.jpg">
+              <figcaption><a href="https://medium.com/@jamesbridle/something-is-wrong-on-the-internet-c39c471271d2" target="off">Amazon Products</a>: Automated T-Shirts</figcaption>
+            </figure>
+            <figure><img src="images/automation_fail_youtube_insane.png">
+              <figcaption><a href="https://medium.com/@jamesbridle/something-is-wrong-on-the-internet-c39c471271d2" target="off">YouTube</a>: Insane Child Content</figcaption>
+            </figure>
+            <figure><img src="images/automation_fail_youtube_pedo.png">
+              <figcaption><a href="https://gizmodo.com/youtubes-nightmare-algorithm-exploited-children-by-reco-1835212766" target="off">YouTube</a>: Videos of Kids, Recommended to Pedophiles</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
       <section class="midnight washi">
         <div class="box z150">
           <h1>Final Take-Aways</h1>
           <ul class="noprefix">
-            <li>👨‍💻️ Get Comfortable with the CLI (Command Line)</li>
+            <li>⌨️ Get Comfortable with the CLI (Command Line)</li>
             <li>💻 Use Bash Scripting</li>
             <li>😓 Avoid Tedium</li>
             <li>🔁 Iterate on the Seamless Experience</li>
+            <li>👨‍💻️ Monitor Automation</li>
             <li><span>🤘</span><a href="https://emojifinder.com/" target="off">Use Emoji</a></li>
           </ul>
         </div>

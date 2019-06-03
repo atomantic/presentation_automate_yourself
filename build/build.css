@@ -310,6 +310,21 @@ p.code .em-blue {
   text-align: center;
   margin: 0 0 20px 0;
 }
+.fullscreen figure {
+  border: 2px solid #c0c0c0;
+  padding: 5px;
+  margin: 10px;
+  float: left;
+  text-align: center;
+}
+.fullscreen figure img {
+  margin: auto;
+  max-height: 300px;
+}
+.figureset {
+  margin: auto;
+  text-align: center;
+}
 .credit {
   z-index: 1000;
   text-shadow: none;
