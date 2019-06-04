@@ -580,6 +580,10 @@ h1 img {
           filter: grayscale(100);
   display: inline-block;
 }
+.twitter-tweet {
+  text-shadow: none;
+  zoom: 130%;
+}
 @-webkit-keyframes rocking {
   from {
     -webkit-transform: rotate(-5deg);
