@@ -9,8 +9,11 @@
     "test": "echo '🆗'"
   },
   "dependencies": {
-    "gulp-gh-pages": "0.5.4"
   },
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:atomantic/presentation_automate_yourself.git"
+	},
   "devDependencies": {
     "bespoke": "1.1.0",
     "bespoke-backdrop": "1.0.0",
@@ -22,29 +25,30 @@
     "bespoke-scale": "1.0.1",
     "bespoke-theme-atomantic": "2.1.8",
     "bespoke-touch": "1.0.0",
-    "brfs": "2.0.1",
+    "brfs": "2.0.2",
     "browserify": "16.2.3",
-    "del": "3.0.0",
+    "del": "4.1.1",
     "gulp": "github:gulpjs/gulp#v4.0.0",
-    "gulp-autoprefixer": "6.0.0",
+    "gulp-autoprefixer": "6.1.0",
     "gulp-connect": "5.7.0",
     "gulp-csso": "3.0.1",
+    "gulp-gh-pages": "0.5.4",
     "gulp-plumber": "1.2.1",
     "gulp-pug": "4.0.1",
     "gulp-rename": "1.4.0",
     "gulp-streamify": "1.0.2",
     "gulp-stylus": "2.7.0",
-    "gulp-uglify": "3.0.1",
-    "jquery": "3.3.1",
+    "gulp-uglify": "3.0.2",
+    "jquery": "3.4.1",
     "notifyjs-browser": "0.4.2",
-    "opn": "5.4.0",
-    "prismjs": "1.15.0",
+    "open": "6.0.0",
+    "prismjs": "1.16.0",
     "through": "2.3.8",
     "vinyl-source-stream": "2.0.0",
     "x-gif": "1.0.5"
   },
   "license": "ISC",
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=8.0.0"
   }
 }
