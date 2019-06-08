@@ -13,7 +13,7 @@ const del = require('del'),
   autoprefixer = require('gulp-autoprefixer'),
   csso = require('gulp-csso'),
   through = require('through'),
-  opn = require('opn'),
+  opn = require('open'),
   streamify = require('gulp-streamify'),
   source = require('vinyl-source-stream'),
   isDist = process.argv.indexOf('serve') === -1
