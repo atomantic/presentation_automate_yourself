@@ -47,32 +47,31 @@ deck.on('activate', function (/*slide*/) {
   }
 });
 
+// require('notifyjs-browser')($);
 
-window.$ = window.jQuery = require("jquery");
-require('notifyjs-browser')($);
+// $.notify.addStyle("instructions", {
+//   html: "<div>" +
+//     "<div class='image' data-notify-html='image'/>" +
+//     "<div class='text-wrapper'>" +
+//     "<div class='title' data-notify-html='title'/>" +
+//     "<div class='text' data-notify-html='text'/>" +
+//     "</div>" +
+//     "<div class='clearfix'></div>" +
+//     "</div>"
+// });
 
-$.notify.addStyle("instructions", {
-  html: "<div>" +
-    "<div class='image' data-notify-html='image'/>" +
-    "<div class='text-wrapper'>" +
-    "<div class='title' data-notify-html='title'/>" +
-    "<div class='text' data-notify-html='text'/>" +
-    "</div>" +
-    "<div class='clearfix'></div>" +
-    "</div>"
-});
 
-setTimeout(function () {
-  $('.notify').each(function () {
-    var $t = $(this);
-    $t.notify({
-      text: $t.attr('title')
-    }, {
-      style: 'instructions',
-      className: $t.data('color') || 'base',
-      autoHide: false,
-      arrowShow: !$t.data('noarrow'),
-      position: $t.data('position') || 'right middle'
-    });
-  });
-}, 2000);
+// setTimeout(function () {
+//   $('.notify').each(function () {
+//     var $t = $(this);
+//     $t.notify({
+//       text: $t.attr('title')
+//     }, {
+//       style: 'instructions',
+//       className: $t.data('color') || 'base',
+//       autoHide: false,
+//       arrowShow: !$t.data('noarrow'),
+//       position: $t.data('position') || 'right middle'
+//     });
+//   });
+// }, 2000);

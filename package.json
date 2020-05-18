@@ -38,8 +38,6 @@
     "gulp-streamify": "1.0.2",
     "gulp-stylus": "2.7.0",
     "gulp-uglify": "3.0.2",
-    "jquery": "3.3.1",
-    "notifyjs-browser": "0.4.2",
     "open": "7.0.4",
     "prismjs": "1.20.0",
     "through": "2.3.8",
