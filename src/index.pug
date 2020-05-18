@@ -2,6 +2,11 @@ doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
+    link(rel='apple-touch-icon', sizes='180x180', href='apple-touch-icon.png')
+    link(rel='icon', type='image/png', sizes='32x32', href='favicon-32x32.png')
+    link(rel='icon', type='image/png', sizes='16x16', href='favicon-16x16.png')
+    link(rel='manifest', href='site.webmanifest')
+
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     title Automate Yourself Out of a Job
     link(rel='stylesheet', type='text/css', href='build/build.css')
@@ -22,9 +27,9 @@ html(lang='en')
             a(href='https://twitter.com/antic')
               i.fa.fa-twitter-square
               | &nbsp;@antic
-          h4 Talk Time: 30 minutes
-          h4 Updated: 2019.08.02
-          a(href="https://bit.ly/automate_yourself") Hosted on bit.ly/automate_yourself
+          h4 Talk Time: 40 minutes
+          h4 Updated: 2020.05.20
+          a(href="https://bit.ly/automate_yourself") View on the web: bit.ly/automate_yourself
             
       section
         .fullscreen
@@ -34,13 +39,16 @@ html(lang='en')
         .box.left.bottom.darker
           h2 Who am I?
           ul
-            li Sr. Staff Software Architect
-            li 17 years in the Industry
+            li Principal Software Engineer
+            li 18 Years in the Industry
             li DevSecOps
             li Machine Learning
-            li Software Security
+            li Prototype to Production
             li etc ¯\_(ツ)_/¯
             li "Own It or It Will Own You"
+
+      section.white
+        img.fillh(src="images/visuals/visuals.001.png")
 
       section.gplay.jellybean
         .fullscreen
@@ -48,7 +56,7 @@ html(lang='en')
         .box.black
           h1 Machine Learning Class
           a(href="https://github.com/atomantic/ml_class") github.com/atomantic/ml_class
-          .mid <span class="reg">🙀</span> "...will automation&nbsp;<span class="em-red animated flash delay5">destroy</span> &nbsp;<strike class="notify" title="humans" data-position="bottom center">human jobs</strike>?"
+          .mid <span class="reg">🙀</span> "...will automation&nbsp;<span class="em-red animate__animated animate__flash animate__delay-5s">destroy</span> &nbsp;<strike class="notify" title="humans" data-position="bottom center">human jobs</strike>?"
 
       section.white
         .box.white.z200
@@ -60,12 +68,12 @@ html(lang='en')
       section.gplay.midnight
         .box
           h2 And Some Scary Things
-          div.notify(title="Today: Boston Dynamics"): img(src="images/bd_dog.gif")
-          div.notify(title="Tomorrow: Black Mirror"): img(src="images/bm_dog.gif")
+          .flex
+            div.notify(title="Today: Boston Dynamics"): img(src="images/bd_dog.gif")
+            div.notify(title="Tomorrow: Black Mirror"): img(src="images/bm_dog.gif")
 
       section.gplay.midnight
-        .fullscreen.blur2
-          x-gif(src="images/bd-fightback.gif", fill, n-times=1)
+        x-gif.blur2(src="images/bd-fightback.gif", fill, n-times=1)
         .box.wait-for-gif
           h2 (⊙＿⊙')
 
@@ -76,11 +84,17 @@ html(lang='en')
           h3: a(href="https://www.youtube.com/watch?v=TIlEYGFBECU") https://www.youtube.com/watch?v=TIlEYGFBECU
       
       section.gplay
+        .box
+          h2 Where are we, really?
+          iframe(width='840', height='472', src='https://www.youtube.com/embed/JzlsvFN_5HI', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+      
+      section.gplay
         .box.z150
           h2 Most AI (Machine Learning)
           .mid is just
           h2.notify(title="Long way from Synthetic Intelligence (SI)", data-position="bottom center") Stupid Math
-
+          span.em-green.animate__animated.animate__zoomIn.animate__delay-2s &gt; .5 good
+          span.em-red.animate__animated.animate__zoomIn.animate__delay-3s &lt; .5 bad
       section.gplay.jellybean
         .fullscreen
           img.fill(src="images/agriculture_jobs.png")
@@ -153,7 +167,7 @@ html(lang='en')
         .box.dark.z200
           .mid in coding
           h2 <span class="em-yellow">Laziness</span> is a <span class="em-green">Virtue</span>
-          h1.animated.pulse.bounce \[._.]/
+          h1.animate__animated.animate__pulse.bounce \[._.]/
 
       section.gplay.jellybean
         .multibox
@@ -240,7 +254,7 @@ html(lang='en')
           x-gif(src="images/eraserhead.gif", fill)
         .box.bottom.right.notify(title="me: low tolerance for repetition", data-position="top middle")
           h2 so tedious...
-          .mid sounds &nbsp;<span class="animated pulse delay3">automatable...</span>
+          .mid sounds &nbsp;<span class="animate__animated animate__pulse delay3">automatable...</span>
 
       section.blue.washi
         .box
@@ -291,22 +305,24 @@ html(lang='en')
            ✅ contains README.md
            ✅ tests pass
       
-      section.gplay.jellbean
-        .fullscreen.blur2
-          x-gif(src="images/nuke-4.gif", fill, n-times=1)
+      section.gplay.jellybean
+        .box.z150
+          h2 Beware False Problems
+          a(href="https://www.technologyreview.com/2018/10/24/139313/a-global-ethics-study-aims-to-help-ai-solve-the-self-driving-trolley-problem/", target="off") Trolley Problem: Should a self-driving car kill the baby or the grandma?
+      
+      section
+        x-gif.fullscreen.blur2(src="images/nuke-4.gif", fill, n-times=1)
         .box.wait-for-gif
           h2 Automation Can't Be Trusted
 
-      section.gplay.midnight
-        blockquote.twitter-tweet(data-lang='en')
-          p(lang='en', dir='ltr')
-            | What I get to babysit until DEF CON. If you look at the first PCB you can see how bad this machine is sometimes. This is more like an unstable hand than automation. If I take my eyes off for a second it finds some way to fail. 
-            a(href='https://t.co/51lWfek4JO') pic.twitter.com/51lWfek4JO
-          | — Whiskey Pirate Crew (@WhiskeyHackers) 
-          a(href='https://twitter.com/WhiskeyHackers/status/1134982180466126849?ref_src=twsrc%5Etfw', target="off") June 2, 2019
-
+      section.gplay.jellybean
+        .box
+          blockquote Evolving a creature built for speed: Grew really tall creatures who generated high velocities by <a class="em-yellow" href="http://www.karlsims.com/papers/siggraph94.pdf" target="off">falling over</a>
       
-      section.gplay.jellbean
+      //- section.gplay.midnight
+      //-   <blockquote class="twitter-tweet" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">What I get to babysit until DEF CON. If you look at the first PCB you can see how bad this machine is sometimes. This is more like an unstable hand than automation. If I take my eyes off for a second it finds some way to fail. <a href="https://t.co/51lWfek4JO">pic.twitter.com/51lWfek4JO</a></p>&mdash; Whiskey Pirate Crew (@WhiskeyHackers) <a href="https://twitter.com/WhiskeyHackers/status/1134982180466126849?ref_src=twsrc%5Etfw">June 2, 2019</a></blockquote>
+
+      section.gplay.jellybean
         .fullscreen
           .figureset
             figure
@@ -364,10 +380,6 @@ html(lang='en')
                   i.fa.fa-github-square
                   | &nbsp;/atomantic
             small: a.back(href='#1') &nbsp; restart
-          .box.right.bottom
-            h3.mid Watch Next
-            .mid Pablos Holman: How to Avoid Winding Up as Pets for A.I. 
-            h2: a(href="http://bit.ly/pablos_fortune" target="off") bit.ly/pablos_fortune
     
-    script(async='', src='https://platform.twitter.com/widgets.js', charset='utf-8')
-    script(src='build/build.js')
+    script(src='build/build.js')   
+    //- <script async defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

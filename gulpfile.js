@@ -1,7 +1,7 @@
 'use strict'
 
 const del = require('del'),
-  {dest, series, src, task, watch} = require('gulp'),
+  { dest, series, src, task, watch } = require('gulp'),
   plumber = require('gulp-plumber'),
   rename = require('gulp-rename'),
   connect = require('gulp-connect'),
@@ -23,40 +23,40 @@ function reload(done) {
   done();
 }
 
-task('clean', function(done) {
-  del(['public']).then(function(){
-     done()
+task('clean', function (done) {
+  del(['public']).then(function () {
+    done()
   })
 })
 
-task('clean:html', function(done) {
-  del(['public/index.html']).then(function(){
-     done()
+task('clean:html', function (done) {
+  del(['public/index.html']).then(function () {
+    done()
   })
 })
 
-task('clean:js', function(done) {
-  del(['public/build/*.js']).then(function(){
-     done()
+task('clean:js', function (done) {
+  del(['public/build/*.js']).then(function () {
+    done()
   })
 })
 
-task('clean:css', function(done) {
-  del(['public/build/build.css']).then(function(){
-     done()
+task('clean:css', function (done) {
+  del(['public/build/build.css']).then(function () {
+    done()
   })
 })
 
-task('clean:images', function(done) {
-  del(['public/images/patterns']).then(function(){
-    del(['public/images']).then(function(){
-       done()
+task('clean:images', function (done) {
+  del(['public/images/patterns']).then(function () {
+    del(['public/images']).then(function () {
+      done()
     })
   })
 
 })
 
-task('js', series('clean:js', function() {
+task('js', series('clean:js', function () {
   var b = browserify({ transform: ['brfs'] })
   b.add('src/scripts/main.js')
 
@@ -68,7 +68,7 @@ task('js', series('clean:js', function() {
     .pipe(connect.reload())
 }))
 
-task('html', series('clean:html', function() {
+task('html', series('clean:html', function () {
   return src('src/index.pug')
     .pipe(isDist ? through() : plumber())
     .pipe(pug({ pretty: true }))
@@ -77,7 +77,7 @@ task('html', series('clean:html', function() {
     .pipe(connect.reload())
 }))
 
-task('css', series('clean:css', function() {
+task('css', series('clean:css', function () {
   return src('src/styles/main.styl')
     .pipe(isDist ? through() : plumber())
     .pipe(stylus({
@@ -91,21 +91,26 @@ task('css', series('clean:css', function() {
     .pipe(dest('public/build'))
 }))
 
-task('x-gif', function() {
+task('x-gif', function () {
   return src([
     'node_modules/x-gif/dist/*'
   ])
     .pipe(dest('public/x-gif'))
 })
 
-task('images', series('clean:images', function() {
+task('images', series('clean:images', function () {
   return src('src/images/**/*')
     .pipe(dest('public/images'))
 }))
 
-task('build', series('js', 'html', 'css', 'images', 'x-gif'))
+task('favicon', series(function () {
+  return src('src/favicon/*')
+    .pipe(dest('public/'))
+}))
 
-task('connect', series('build', function(done) {
+task('build', series('js', 'html', 'css', 'images', 'favicon', 'x-gif'))
+
+task('connect', series('build', function (done) {
   connect.server({
     root: 'public',
     port: 8071,
@@ -119,7 +124,7 @@ task('deploy', () => src('./public/**/*').pipe(ghpages()))
 task('serve', series('connect', function (done) {
   opn('http://localhost:8071')
   done()
-}, function(done) {
+}, function (done) {
   watch('src/*.pug', series('html', reload))
   watch('src/styles/*.styl', series('css', reload))
   watch('src/images/**/*', series('images', reload))

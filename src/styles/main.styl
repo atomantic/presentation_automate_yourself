@@ -1,8 +1,9 @@
 // New to Stylus? Check out http://learnboost.github.io/stylus
 // Use modern CSS thanks to Autoprefixer: https://github.com/ai/autoprefixer
-
-// Import CSS from "node_modules" and "bower_components"
 // thanks to Stylus' "import css" and "paths" options
+
+
+@import 'bespoke-theme-atomantic/dist/theme.css'
 
 // @import 'prismjs/themes/prism.css'
 // @import 'prismjs/themes/prism-coy.css'
@@ -289,15 +290,6 @@ $me-height = 72px
   top:-4px
   left:10px
 
-.z200
-  zoom:200%
-.z120
-  zoom:120%
-.z50
-  zoom:50%
-.z80
-  zoom:80%
-
 
 @keyframes rocking
   from
@@ -318,15 +310,6 @@ h1
     vertical-align: middle
     margin-right:5px
 
-.em-grey
-  color: #333
-  background-color: #ccc
-  border-color: #666
-.em-white
-  color: #666
-  background-color: #fff
-  border-color: #ccc
-
 .reg
   font-style:normal
 
@@ -341,3 +324,9 @@ h1
 .twitter-tweet
   text-shadow:none
   zoom:130%
+
+.flex
+  display:flex
+  div
+    width:45%
+    vertical-align:middle
