@@ -112,17 +112,17 @@ html(lang='en')
         .box.left
           h2 😱 But Our Agriculture Jobs...
           ul
-            li 1901: > 60%
-            li 2019: < ~5%
+            li 1901: <span class="em-red">&gt; 60%</span>
+            li 2019: <span class="em-green">&lt; 5%</span>
 
       section.treebark.jellybean
         .box.dark.z150
-          h2 55% unemployment!?
+          h2 ~55% unemployment!?
           ul.nextBullet.noprefix
             li.mid nope, they became:
-            li 🌍 web developers
-            li 📺 YouTube personalities
-            li 💹 algorithmic investors
+            li 🌍 Web Developers
+            li 📺 YouTube Personalities
+            li 💹 Algorithmic Investors
             li etc...
       
       section.treebark.black
@@ -172,6 +172,14 @@ html(lang='en')
           h2 Always be automating away tedium
           div: img(src="images/factory.gif")  
           .mid You will be equiped for the next job
+
+      section.diagmonds.midnight
+        .box
+          h1 Keep in Mind
+          ul
+            li Companies don't love you
+            li Keep building your skills (stretch into the <span class="em-green">adjacent possible</span>)
+            li Always be ready to change role/company
 
       section.diagmonds.blue
         .box.dark.z200
@@ -264,12 +272,13 @@ html(lang='en')
           x-gif(src="images/eraserhead.gif", fill)
         .box.bottom.right.notify(title="me: low tolerance for repetition", data-position="top middle")
           h2 so tedious...
-          .mid sounds &nbsp;<span class="animate__animated animate__pulse delay3">automatable...</span>
+          .mid sounds &nbsp;<span class="animate__animated animate__pulse animate__delay-3s">automatable...</span>
 
       section.blue.washi
         .box
+          .mid Any language can automate
           h1 Learn Shell Scripting
-          .mid Get Comfortable with the Command-line
+          .mid Get comfortable with the command-line
 
       section.gplay.jellbean
         .box
@@ -318,8 +327,26 @@ html(lang='en')
       section.gplay.jellybean
         .box.z150
           h2 Beware False Problems
-          a(href="https://www.technologyreview.com/2018/10/24/139313/a-global-ethics-study-aims-to-help-ai-solve-the-self-driving-trolley-problem/", target="off") Trolley Problem: Should a self-driving car kill the baby or the grandma?
-      
+          span Trolley Problem: Should a self-driving car 
+          a(href="https://www.technologyreview.com/2018/10/24/139313/a-global-ethics-study-aims-to-help-ai-solve-the-self-driving-trolley-problem/", target="off") kill the baby or the grandma?
+          .mid Do not engineer &nbsp;<span class="em-red">bad options</span>
+
+      section.gplay.jellybean
+        .box.z150
+          h2 Real Engineering Problems
+          ul
+            li Why didn't the <span class="em-yellow">breaks</span> work?
+            li Why was the car driving <span class="em-red">too fast</span>?
+            li Why did it <span class="em-green">not see</span> the problem earlier?
+
+      section.gplay.jellybean
+        .box.z150
+          h2 Extremely Common
+          ul
+            li Will users think it's <span class="em-orange">creepy</span>?
+            li Does collecting that data add <span class="em-red">liability</span>?
+            li Can we just use <span class="em-green">AWS Lambda</span>?
+
       section
         x-gif.fullscreen.blur2(src="images/nuke-4.gif", fill, n-times=1)
         .box.wait-for-gif
@@ -329,8 +356,9 @@ html(lang='en')
         .box
           h1 The Simplest Solution Wins
           .mid If it can cheat, it will
-          h2 <span class="em-yellow">Task:</span> Evolve a creature optimized for speed
-          h2 <span class="em-green">Result:</span> Absurdly tall creature, which can generate high velocities by <a class="em-red" href="http://www.karlsims.com/papers/siggraph94.pdf" target="off">falling over</a>
+          ul.nextBullet.noprefix
+            li <span class="em-yellow">Task:</span> Evolve a creature optimized for speed
+            li <span class="em-green">Result:</span> Absurdly tall creature, which can generate high velocities by <a class="em-red" href="http://www.karlsims.com/papers/siggraph94.pdf" target="off">falling over</a>
       
       section.gplay.jellybean
         .box
