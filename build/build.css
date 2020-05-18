@@ -533,18 +533,6 @@ pre[class*="language-"].smaller {
   top: -4px;
   left: 10px;
 }
-.z200 {
-  zoom: 200%;
-}
-.z120 {
-  zoom: 120%;
-}
-.z50 {
-  zoom: 50%;
-}
-.z80 {
-  zoom: 80%;
-}
 .rocking {
   display: inline-block;
   -webkit-transform: rotate(30deg);
@@ -558,16 +546,6 @@ h1 {
 h1 img {
   vertical-align: middle;
   margin-right: 5px;
-}
-.em-grey {
-  color: #333;
-  background-color: #ccc;
-  border-color: #666;
-}
-.em-white {
-  color: #666;
-  background-color: #fff;
-  border-color: #ccc;
 }
 .reg {
   font-style: normal;
@@ -584,6 +562,15 @@ h1 img {
 .twitter-tweet {
   text-shadow: none;
   zoom: 130%;
+}
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.flex div {
+  width: 45%;
+  vertical-align: middle;
 }
 @-webkit-keyframes rocking {
   from {
