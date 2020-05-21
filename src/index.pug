@@ -118,7 +118,7 @@ html(lang='en')
           h1 1980: electronic spreadsheet
           ul.nextBullet.noprefix
             li: h2 <span class="em-red">400,000</span> bookkeeping and accounting clerk jobs <span class="em-red">gone</span>
-            li: .mid but...
+            li: .mid and...
             li: h2.nextBullet <span class="em-green">600,000</span> accounting jobs <span class="em-green">created</span>
 
       section
@@ -142,12 +142,12 @@ html(lang='en')
         .box
           h1 Keep in Mind
           ul
-            li Companies don't love you
+            li Companies <a href="https://github.com/ceejbot/economics-of-package-management/blob/master/essay.md" target="off">don't love you</a>
             li Keep building your skills (stretch into the <span class="em-green">adjacent possible</span>)
             li Always be ready to change role/company
 
       section.white
-        img.fillh(src="images/visuals/visuals.001.png")
+        img.fill(src="images/visuals/visuals.001.png")
 
       section.gplay.jellybean
         .fullscreen
@@ -168,8 +168,13 @@ html(lang='en')
         .box
           h2 And Some Scary Things
           .flex
-            div.notify(title="Today: Boston Dynamics"): img(src="images/bd_dog.gif")
-            div.notify(title="Tomorrow: Black Mirror"): img(src="images/bm_dog.gif")
+            div.notify(title="Today: Boston Dynamics")
+              img(src="images/bd_dog.gif")
+              div: a(href="https://www.youtube.com/watch?v=W1LWMk7JB80", target="off") Boston Dynamics
+            div.notify(title="Tomorrow: Black Mirror")
+              img(src="images/bm_dog.gif")
+              div: a(href="https://www.imdb.com/title/tt2085059/", target="off") Black Mirror
+
 
       section.gplay.midnight
         x-gif.blur2(src="images/bd-fightback.gif", fill, n-times=1)
@@ -201,22 +206,29 @@ html(lang='en')
           h2 <span class="em-yellow">Laziness</span> is a <span class="em-green">Virtue</span>
           h1.animate__animated.animate__pulse.bounce \[._.]/
 
+      section.diagmonds.blue
+        .box.dark
+          h1 Keep Code <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="off">DRY</a>
+          .mid don't repeat yourself
+
       section.gplay.jellybean
         .multibox
           h2.title: .mid <span class="reg z150">🤔</span>&nbsp; Code Libraries are Automation!
           .box.left
-            h2 Before jQuery
             .mid I need an element
-            pre.line-numbers: code.language-javascript.
+            pre: code.language-html.
+              &lt;div id="foo"&gt;foo...&lt;/div&gt;
+              &lt;div id="bar"&gt;bar...&lt;/div&gt;
+            pre: code.language-javascript.
               var foo = document.getElementById('foo');
               var bar = document.getElementById('bar');
-            .mid remove redundancy
+            .mid DRY
             pre.line-numbers: code.language-javascript.
               var $ = document.getElementById;
               var foo = $('foo');
               var bar = $('bar');
           .box.right
-            h2 jQuery
+            h2 Early jQuery (super-DRY)
             pre.line-numbers: code.language-javascript.
               var $ = function(selector){
                 var query = {
@@ -229,8 +241,9 @@ html(lang='en')
                 if(selector[0]==='.') type = 'cls'; 
                 return query[type](selector);
               }
+              var $foo = $('#foo')
 
-          h2.foot: .mid <span class="reg z150">🤩</span>&nbsp; now: document.querySelectorAll() - <a href="http://youmightnotneedjquery.com/" target="off">no more jQuery</a>
+          h2.foot.mid <span class="reg z150">🤩</span>&nbsp; now: document.querySelectorAll() - <a href="http://youmightnotneedjquery.com/" target="off">no more jQuery</a>
       
       section.gplay.jellybean
         .box.z200
