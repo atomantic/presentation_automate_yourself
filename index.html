@@ -132,7 +132,7 @@
               <h2><span class="em-red">400,000</span> bookkeeping and accounting clerk jobs <span class="em-red">gone</span></h2>
             </li>
             <li>
-              <div class="mid">but...</div>
+              <div class="mid">and...</div>
             </li>
             <li>
               <h2 class="nextBullet"><span class="em-green">600,000</span> accounting jobs <span class="em-green">created</span></h2>
@@ -161,13 +161,13 @@
         <div class="box">
           <h1>Keep in Mind</h1>
           <ul>
-            <li>Companies don't love you</li>
+            <li>Companies <a href="https://github.com/ceejbot/economics-of-package-management/blob/master/essay.md" target="off">don't love you</a></li>
             <li>Keep building your skills (stretch into the <span class="em-green">adjacent possible</span>)</li>
             <li>Always be ready to change role/company</li>
           </ul>
         </div>
       </section>
-      <section class="white"><img class="fillh" src="images/visuals/visuals.001.png"></section>
+      <section class="white"><img class="fill" src="images/visuals/visuals.001.png"></section>
       <section class="gplay jellybean">
         <div class="fullscreen"><img class="fill" src="images/mlclass.png"></div>
         <div class="box black">
@@ -188,8 +188,12 @@
         <div class="box">
           <h2>And Some Scary Things</h2>
           <div class="flex">
-            <div class="notify" title="Today: Boston Dynamics"><img src="images/bd_dog.gif"></div>
-            <div class="notify" title="Tomorrow: Black Mirror"><img src="images/bm_dog.gif"></div>
+            <div class="notify" title="Today: Boston Dynamics"><img src="images/bd_dog.gif">
+              <div><a href="https://www.youtube.com/watch?v=W1LWMk7JB80" target="off">Boston Dynamics</a></div>
+            </div>
+            <div class="notify" title="Tomorrow: Black Mirror"><img src="images/bm_dog.gif">
+              <div><a href="https://www.imdb.com/title/tt2085059/" target="off">Black Mirror</a></div>
+            </div>
           </div>
         </div>
       </section>
@@ -225,23 +229,30 @@
           <h1 class="animate__animated animate__pulse bounce">\[._.]/</h1>
         </div>
       </section>
+      <section class="diagmonds blue">
+        <div class="box dark">
+          <h1>Keep Code <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="off">DRY</a></h1>
+          <div class="mid">don't repeat yourself</div>
+        </div>
+      </section>
       <section class="gplay jellybean">
         <div class="multibox">
           <h2 class="title">
             <div class="mid"><span class="reg z150">🤔</span>&nbsp; Code Libraries are Automation!</div>
           </h2>
           <div class="box left">
-            <h2>Before jQuery</h2>
             <div class="mid">I need an element</div>
-            <pre class="line-numbers"><code class="language-javascript">var foo = document.getElementById('foo');
+            <pre><code class="language-html">&lt;div id="foo"&gt;foo...&lt;/div&gt;
+&lt;div id="bar"&gt;bar...&lt;/div&gt;</code></pre>
+            <pre><code class="language-javascript">var foo = document.getElementById('foo');
 var bar = document.getElementById('bar');</code></pre>
-            <div class="mid">remove redundancy</div>
+            <div class="mid">DRY</div>
             <pre class="line-numbers"><code class="language-javascript">var $ = document.getElementById;
 var foo = $('foo');
 var bar = $('bar');</code></pre>
           </div>
           <div class="box right">
-            <h2>jQuery</h2>
+            <h2>Early jQuery (super-DRY)</h2>
             <pre class="line-numbers"><code class="language-javascript">var $ = function(selector){
   var query = {
     id: document.getElementById,
@@ -253,11 +264,10 @@ var bar = $('bar');</code></pre>
   if(selector[0]==='.') type = 'cls'; 
   return query[type](selector);
 }
+var $foo = $('#foo')
 </code></pre>
           </div>
-          <h2 class="foot">
-            <div class="mid"><span class="reg z150">🤩</span>&nbsp; now: document.querySelectorAll() - <a href="http://youmightnotneedjquery.com/" target="off">no more jQuery</a></div>
-          </h2>
+          <h2 class="foot mid"><span class="reg z150">🤩</span>&nbsp; now: document.querySelectorAll() - <a href="http://youmightnotneedjquery.com/" target="off">no more jQuery</a></h2>
         </div>
       </section>
       <section class="gplay jellybean">
