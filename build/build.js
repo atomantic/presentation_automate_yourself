@@ -1863,52 +1863,52 @@ Prism.languages.js = Prism.languages.javascript;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],18:[function(require,module,exports){
-'use strict';
-require('prismjs');
-require('prismjs/components/prism-markup.min.js');
-require('prismjs/components/prism-yaml.min.js');
-require('prismjs/components/prism-docker.min.js');
-require('prismjs/components/prism-bash.min.js');
-require('prismjs/components/prism-json.min.js');
-require('prismjs/plugins/line-highlight/prism-line-highlight.js');
-require('prismjs/plugins/line-numbers/prism-line-numbers.js');
+"use strict";
 
-const bespoke = require('bespoke'),
-  atomantic = require('bespoke-theme-atomantic'),
-  keys = require('bespoke-keys'),
-  touch = require('bespoke-touch'),
-  bullets = require('bespoke-bullets'),
-  backdrop = require('bespoke-backdrop'),
+const bespoke = require("bespoke"),
+  atomantic = require("bespoke-theme-atomantic"),
+  keys = require("bespoke-keys"),
+  touch = require("bespoke-touch"),
+  bullets = require("bespoke-bullets"),
+  backdrop = require("bespoke-backdrop"),
   // scale = require('bespoke-scale'),
-  hash = require('bespoke-hash'),
-  progress = require('bespoke-progress'),
-  forms = require('bespoke-forms');
+  hash = require("bespoke-hash"),
+  progress = require("bespoke-progress"),
+  forms = require("bespoke-forms");
+
+require("prismjs");
+require("prismjs/components/prism-markup.min.js");
+require("prismjs/components/prism-yaml.min.js");
+require("prismjs/components/prism-docker.min.js");
+require("prismjs/components/prism-bash.min.js");
+require("prismjs/components/prism-json.min.js");
+require("prismjs/plugins/line-highlight/prism-line-highlight.js");
+require("prismjs/plugins/line-numbers/prism-line-numbers.js");
 
 // Bespoke.js
-const deck = bespoke.from('article', [
+const deck = bespoke.from("article", [
   atomantic(),
   keys(),
   touch(),
-  bullets('.nextBullet > li'),
+  bullets(".nextBullet > li"),
   backdrop(),
   // scale(),
   hash(),
   progress(),
-  forms()
+  forms(),
 ]);
 
-
-deck.on('activate', function (/*slide*/) {
-  const $highlight = $('.bespoke-active pre[data-line]').not('.rendered');
+deck.on("activate", function (/*slide*/) {
+  const $highlight = $(".bespoke-active pre[data-line]").not(".rendered");
   if ($highlight.length) {
     // re-trigger prism to activate line-highlight properly
     $highlight.each(function () {
       const $el = $(this);
       setTimeout(function () {
-        Prism.highlightElement($el.find('code').get(0))
-        $el.addClass('rendered')
+        Prism.highlightElement($el.find("code").get(0));
+        $el.addClass("rendered");
       }, 50);
-    })
+    });
   }
 });
 
@@ -1924,7 +1924,6 @@ deck.on('activate', function (/*slide*/) {
 //     "<div class='clearfix'></div>" +
 //     "</div>"
 // });
-
 
 // setTimeout(function () {
 //   $('.notify').each(function () {
