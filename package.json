@@ -38,7 +38,7 @@
     "gulp-stylus": "^2.7.0",
     "gulp-uglify": "^3.0.2",
     "open": "8.0.2",
-    "prismjs": "^1.20.0",
+    "prismjs": "^1.27.0",
     "through": "^2.3.8",
     "vinyl-source-stream": "^2.0.0",
     "x-gif": "^1.0.5"
